@@ -10,6 +10,6 @@ import tensorflow as tf
 custom_module = tf.load_ops_library("./custom_add.so")
 tensor1 = tf.constant([[0],[1],[2]], dtype = tf.int32)
 tensor2 = tf.constant([[1], [2], [3]], dtype = tf.int32)
-add_op = custom_module(tensor1, tensor2)
+add_op = custom_module.custom_add(tensor1, tensor2)
 print(add_op)
 ```
